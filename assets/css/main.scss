@@ -1,0 +1,115 @@
+// fontfamily
+@font-face {
+  font-family: 'dosismedium';
+  src: url('../fonts/dosis-medium-webfont.woff2') format('woff2'),
+       url('../fonts/dosis-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'dosislight';
+  src: url('../fonts/dosis-light-webfont.woff2') format('woff2'),
+       url('../fonts/dosis-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+// top-nav
+.top-nav-bar {
+  background-color: #00ce68;
+  color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 63px;
+  font-family: 'dosismedium', Arial, sans-serif;
+  li {
+    color: #fff;
+    font-size: 25px;
+  }
+}
+
+// sidebar-nav
+.sidebar-nav {
+  min-height: calc(100vh - 63px);
+  background: #f2f8f9;
+  padding: 0;
+  width: 255px;
+  z-index: 22;
+  transition: width 0.25s ease, background 0.25s ease;
+  -webkit-transition: width 0.25s ease, background 0.25s ease;
+  -moz-transition: width 0.25s ease, background 0.25s ease;
+  -ms-transition: width 0.25s ease, background 0.25s ease;
+  .sidebar-title {
+    padding: 16px 35px;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'dosismedium', Arial, sans-serif;
+    word-spacing: 2px;
+    color: #425569;
+  }
+  .nav {
+    overflow: hidden;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    font-family: 'dosismedium', Arial, sans-serif;
+  }
+}
+
+// content-body
+.page-body-wrapper {
+  padding-top: 63px;
+  min-height: calc(100vh - 63px);
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  padding-left: 0;
+  padding-right: 0;
+  .main-panel {
+    transition: width 0.25s ease, margin 0.25s ease;
+    width: calc(100% - 255px);
+    min-height: calc(100vh - 63px);
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+// short hand
+body {
+  font-family: 'dosismedium', Arial, sans-serif;
+  color: #425569;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1099;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.center-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-family: 'dosismedium', Arial, sans-serif;
+  display: block;
+  font-weight: 300;
+  font-size: 100px;
+  color: #425569;
+  letter-spacing: 1px;
+}
