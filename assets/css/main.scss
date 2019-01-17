@@ -19,7 +19,7 @@
 
 // top-nav
 .top-nav-bar {
-  background-color: #00ce68;
+  background-color: #41b883;
   color: #fff;
   padding-left: 15px;
   padding-right: 15px;
@@ -34,7 +34,7 @@
 // sidebar-nav
 .sidebar-nav {
   min-height: calc(100vh - 63px);
-  background: #f2f8f9;
+  background: #fff;
   padding: 0;
   width: 255px;
   z-index: 22;
@@ -55,6 +55,9 @@
     flex-wrap: nowrap;
     flex-direction: column;
     font-family: 'dosismedium', Arial, sans-serif;
+    .active {
+      color: #41b883;
+    }
   }
 }
 
@@ -68,6 +71,7 @@
   flex-direction: row;
   padding-left: 0;
   padding-right: 0;
+  
   .main-panel {
     transition: width 0.25s ease, margin 0.25s ease;
     width: calc(100% - 255px);
@@ -76,6 +80,14 @@
     display: flex;
     -webkit-flex-direction: column;
     flex-direction: column;
+    
+    .content-wrapper {
+      background: #f2f8f9;
+      padding: 1.5rem 1.7rem;
+      width: 100%;
+      -webkit-flex-grow: 1;
+      flex-grow: 1;
+    }
   }
 }
 
@@ -83,6 +95,24 @@
 body {
   font-family: 'dosismedium', Arial, sans-serif;
   color: #425569;
+}
+.grid-margin {
+  margin-bottom: 25px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0;
+  border-radius: 2px;
+  .card-body {
+    padding: 1.88rem 1.81rem;
+  }
 }
 
 .fixed-top {
@@ -96,6 +126,7 @@ body {
 a:hover {
   text-decoration: none;
 }
+
 
 .center-container {
   min-height: 100vh;
