@@ -123,8 +123,15 @@ body {
   z-index: 1099;
 }
 
-a:hover {
+a {
+  color: #425569;
   text-decoration: none;
+}
+
+a:hover {
+  color: #425569;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 

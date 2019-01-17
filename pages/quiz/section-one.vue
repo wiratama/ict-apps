@@ -10,9 +10,9 @@
             <div class="col-12 grid-margin">
               <div class="card">
                 <div class="card-body">
-                  <h2>Simple ICT - Apps</h2>
+                  <h2>This is section one</h2>
                   <hr>
-                  <nuxt-link to="/quiz/section-one">Let's begin the game</nuxt-link>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente porro minima, tempora repudiandae quaerat amet natus et repellendus possimus, iusto temporibus magni? Facere illo recusandae voluptatum placeat cupiditate aliquam nesciunt!</p>
                 </div>
               </div>
             </div>
