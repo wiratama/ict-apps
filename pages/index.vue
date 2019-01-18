@@ -12,7 +12,7 @@
                 <div class="card-body">
                   <h2>Simple ICT - Apps</h2>
                   <hr>
-                  <nuxt-link to="/quiz/section-one">Let's begin the game</nuxt-link>
+                  <nuxt-link to="/quiz/section-1">Let's begin the game</nuxt-link>
                 </div>
               </div>
             </div>

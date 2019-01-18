@@ -10,7 +10,7 @@ module.exports = {
     title: pkg.name,
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
@@ -29,7 +29,9 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '@/assets/css/main.scss'
+    '@/assets/css/main.scss',
+    '@/assets/css/open-iconic.css',
+    '@/assets/css/open-iconic-bootstrap.css',
   ],
 
   /*
@@ -61,16 +63,16 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
+    // extend(config, ctx) {
+    //   // Run ESLint on save
+    //   if (ctx.isDev && ctx.isClient) {
+    //     config.module.rules.push({
+    //       enforce: 'pre',
+    //       test: /\.(js|vue)$/,
+    //       loader: 'eslint-loader',
+    //       exclude: /(node_modules)/
+    //     })
+    //   }
+    // }
   }
 }
