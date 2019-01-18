@@ -1,7 +1,6 @@
 // const
 $white: #fff;
 $main-green: #41b883;
-$navbar-height: 63px;
 $sidebar-width: 255px;
 
 // fontfamily
@@ -29,7 +28,7 @@ $sidebar-width: 255px;
   color: $white;
   padding-left: 15px;
   padding-right: 15px;
-  height: $navbar-height;
+  height: 63px;
   font-family: 'dosismedium', Arial, sans-serif;
   .nav-item {
     color: $white;
@@ -48,7 +47,7 @@ $sidebar-width: 255px;
 
 // sidebar-nav
 .sidebar-nav {
-  min-height: calc(100vh - $navbar-height);
+  min-height: calc(100vh - 63px);
   background: $white;
   padding: 0;
   width: $sidebar-width;
@@ -87,8 +86,8 @@ $sidebar-width: 255px;
 
 // content-body
 .page-body-wrapper {
-  padding-top: $navbar-height;
-  min-height: calc(100vh - $navbar-height);
+  padding-top: 63px;
+  min-height: calc(100vh - 63px);
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
@@ -99,7 +98,7 @@ $sidebar-width: 255px;
   .main-panel {
     transition: width 0.25s ease, margin 0.25s ease;
     width: calc(100% - 255px);
-    min-height: calc(100vh - $navbar-height);
+    min-height: calc(100vh - 63px);
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
@@ -139,8 +138,8 @@ $sidebar-width: 255px;
 @media screen and (max-width: 991px) {
   .sidebar-navcanvas {
     position: fixed;
-    max-height: calc(100vh - $navbar-height);
-    top: $navbar-height;
+    max-height: calc(100vh - 63px);
+    top: 63px;
     bottom: 0;
     overflow: auto;
     right: -$sidebar-width;
