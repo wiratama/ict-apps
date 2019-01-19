@@ -94,10 +94,10 @@
                   <b>Harga jual = Rp 126.000,00</b><br>
                   <b>Persentase keuntungan = 5%</b><br>
                   <br>
-                  $$Harga\ pembelian\ =\ \frac {100\%}{100\%+Persentase\ keuntungan} \times Harga\ jual$$<br>
-                  $$Harga\ pembelian\ =\ \frac {100\%}{100\%+5\%} \times Rp\ 126.000,00$$<br>
-                  $$Harga\ pembelian\ =\ \frac {100\%}{105\%} \times Rp\ 126.000,00$$<br>
-                  $$Harga\ pembelian\ =\ Rp\ 120.000,00$$<br>
+                  <b>Harga pembelian = 100% / ( 100% + Persentase keuntungan ) X Harga jual</b><br>
+                  <b>Harga pembelian</b> = 100% / ( 100% + 5% ) X Rp 126.000,00<br>
+                  <b>Harga pembelian</b> = 100% / 105% X Rp 126.000,00<br>
+                  <b>Harga pembelian</b> = Rp 120.000,00<br>
                   <hr>
                   <nuxt-link to="/quiz/section-3" class="btn btn-success">Got it!</nuxt-link>
                 </div>

@@ -13,7 +13,7 @@
                 <div class="card-body">
                   <h2>Simple ICT - Quiz Apps</h2>
                   <hr>
-                  <nuxt-link to="/quiz/section-1" class="btn btn-success">Let's begin the game</nuxt-link>
+                  <nuxt-link to="/quiz/section-1" class="btn btn-success">Let's the game begin</nuxt-link>
                   <h4 class="app-body-powered">Made with love by <b>Ni Made Ary Wirdayanti - 1823011019</b></h4>
                 </div>
               </div>
