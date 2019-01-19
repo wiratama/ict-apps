@@ -97,10 +97,6 @@
                   <b>Untung</b> = Rp 18.360.000,00 - Rp 17.000.000,00<br>
                   <b>Untung</b> = Rp 1.360.000,00<br>
                   <br>
-                  <!-- <b>Persentase keuntungan = $$\frac {Untung}{Harga beli} \times 100\%$$</b><br> -->
-                  <!-- <b>Persentase keuntungan</b> = $$\frac {Rp\ 1.360.000,00}{Rp\ 17.000.000,00} \times 100\%$$<br> -->
-                  <!-- <b>Persentase keuntungan</b> = 8%<br> -->
-
                   $$Persentase\ keuntungan\ =\ \frac {Untung}{Harga beli} \times 100\%$$<br>
                   $$Persentase\ keuntungan\ =\ \frac {Rp\ 1.360.000,00}{Rp\ 17.000.000,00} \times 100\%$$<br>
                   $$Persentase\ keuntungan\ =\ 8\%$$<br>

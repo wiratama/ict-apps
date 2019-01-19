@@ -98,10 +98,9 @@
                   <b>Keuntungan = Rp 15.000.000,00 + Rp 12.500.000,00</b><br>
                   <b>Keuntungan</b> = Rp 2.500.000,00<br>
                   <br>
-
-                  <b>Persentase keuntungan = ( Untung/Harga beli ) x 100%</b><br>
-                  <b>Persentase keuntungan</b> = ( Rp 2.500.000,00/Rp 12.500.000,00 ) x 100%<br>
-                  <b>Persentase keuntungan</b> = 20%<br>
+                  $$Persentase\ keuntungan\ =\ \frac {Untung}{Harga\ beli} \times 100\%$$<br>
+                  $$Persentase\ keuntungan\ =\ \frac {Rp\ 2.500.000,00}{Rp\ 12.500.000,00} \times 100\%$$<br>
+                  $$Persentase\ keuntungan\ =\ 20\%$$<br>
                   <hr>
                   <nuxt-link to="/" class="btn btn-success">Got it!</nuxt-link>
                 </div>
@@ -159,6 +158,7 @@ export default {
       if(this.section_answer!='4') {
         this.hidePembahasan = false;
         this.$refs.failedModal.show();
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
       } else {
         this.$refs.successModal.show();
       }
