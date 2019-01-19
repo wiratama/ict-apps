@@ -102,7 +102,8 @@
                   <b>Persentase keuntungan = ( Untung/Harga beli ) x 100%</b><br>
                   <b>Persentase keuntungan</b> = ( Rp 2.500.000,00/Rp 12.500.000,00 ) x 100%<br>
                   <b>Persentase keuntungan</b> = 20%<br>
-                  <br>
+                  <hr>
+                  <nuxt-link to="/" class="btn btn-success">Got it!</nuxt-link>
                 </div>
               </div>
             </div>
@@ -113,6 +114,21 @@
       </div>
 
     </div>
+
+    <b-modal ref="successModal" hide-footer title="Gothca!">
+      <div class="d-block text-center">
+        <span class="oi success-icon-modal" data-glyph="check"></span>
+        <h3>Yo're Done!</h3>
+      </div>
+      <nuxt-link to="/" class="btn btn-success">Got it!</nuxt-link>
+    </b-modal>
+    <b-modal ref="failedModal" hide-footer title="Gothca!">
+      <div class="d-block text-center">
+        <span class="oi failed-icon-modal" data-glyph="x"></span>
+        <h3>Yo're Wrong!</h3>
+      </div>
+      <button class="btn btn-danger" @click="hideModal">Got it!</button>
+    </b-modal>
   </div>
 </template>
 
@@ -135,11 +151,21 @@ export default {
   },
   methods: {
     setSectionAnswer() {
+      this.$refs.successModal.hide();
+      this.$refs.failedModal.hide();
+
       let _section = 'answer_section1';
       this.hidePembahasan = true;
       if(this.section_answer!='4') {
         this.hidePembahasan = false;
+        this.$refs.failedModal.show();
+      } else {
+        this.$refs.successModal.show();
       }
+    },
+    hideModal () {
+      this.$refs.successModal.hide();
+      this.$refs.failedModal.hide()
     }
   },
 }

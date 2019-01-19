@@ -13,7 +13,7 @@
                   <h2 clas="section-title">Section 1</h2>
                   <hr>
                   <p class="section-question">
-                    Anto membeli motor baru dengan harga Rp. 17.000.000,00 dan dijual lagi dengan harga Rp. 18.360,00<br>
+                    Anto membeli motor baru dengan harga Rp. 17.000.000,00 dan dijual lagi dengan harga Rp. 18.360.000,00<br>
                     Tentukan pesentase keuntungan yg diperoleh!
                   </p>
                 </div>
@@ -100,7 +100,7 @@
                   <b>Persentase keuntungan = Untung/Harga beli x 100%</b><br>
                   <b>Persentase keuntungan</b> = Rp 1.360.000,00/Rp 17.000.000,00 x 100%<br>
                   <b>Persentase keuntungan</b> = 8%<br>
-
+                  <hr>
                   <nuxt-link to="/quiz/section-2" class="btn btn-success">Got it!</nuxt-link>
                 </div>
               </div>
@@ -112,6 +112,21 @@
       </div>
 
     </div>
+
+    <b-modal ref="successModal" hide-footer title="Gothca!">
+      <div class="d-block text-center">
+        <span class="oi success-icon-modal" data-glyph="check"></span>
+        <h3>Succes!</h3>
+      </div>
+      <nuxt-link to="/quiz/section-2" class="btn btn-success">Got it!</nuxt-link>
+    </b-modal>
+    <b-modal ref="failedModal" hide-footer title="Gothca!">
+      <div class="d-block text-center">
+        <span class="oi failed-icon-modal" data-glyph="x"></span>
+        <h3>Yo're Wrong!</h3>
+      </div>
+      <button class="btn btn-danger" @click="hideModal">Got it!</button>
+    </b-modal>
   </div>
 </template>
 
@@ -134,11 +149,21 @@ export default {
   },
   methods: {
     setSectionAnswer() {
+      this.$refs.successModal.hide();
+      this.$refs.failedModal.hide();
+
       let _section = 'answer_section1';
       this.hidePembahasan = true;
       if(this.section_answer!='3') {
         this.hidePembahasan = false;
+        this.$refs.failedModal.show();
+      } else {
+        this.$refs.successModal.show();
       }
+    },
+    hideModal () {
+      this.$refs.successModal.hide();
+      this.$refs.failedModal.hide();
     }
   },
 }

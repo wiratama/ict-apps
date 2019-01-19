@@ -189,7 +189,7 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1099;
+  z-index: 999;
 }
 
 a {
@@ -218,4 +218,14 @@ a:hover {
 
 .text-muted {
   color: #a5a3a3 !important;
+}
+
+.success-icon-modal {
+  font-size: 50px !important;
+  color: $main-green;
+}
+
+.failed-icon-modal {
+  font-size: 50px !important;
+  color: #dc3545;
 }

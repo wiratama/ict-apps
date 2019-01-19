@@ -98,7 +98,7 @@
                   <b>Harga pembelian</b> = 100% / ( 100% + 5% ) X Rp 126.000,00<br>
                   <b>Harga pembelian</b> = 100% / 105% X Rp 126.000,00<br>
                   <b>Harga pembelian</b> = Rp 120.000,00<br>
-
+                  <hr>
                   <nuxt-link to="/quiz/section-3" class="btn btn-success">Got it!</nuxt-link>
                 </div>
               </div>
@@ -110,6 +110,21 @@
       </div>
 
     </div>
+
+    <b-modal ref="successModal" hide-footer title="Gothca!">
+      <div class="d-block text-center">
+        <span class="oi success-icon-modal" data-glyph="check"></span>
+        <h3>Succes!</h3>
+      </div>
+      <nuxt-link to="/quiz/section-3" class="btn btn-success">Got it!</nuxt-link>
+    </b-modal>
+    <b-modal ref="failedModal" hide-footer title="Gothca!">
+      <div class="d-block text-center">
+        <span class="oi failed-icon-modal" data-glyph="x"></span>
+        <h3>Yo're Wrong!</h3>
+      </div>
+      <button class="btn btn-danger" @click="hideModal">Got it!</button>
+    </b-modal>
   </div>
 </template>
 
@@ -132,11 +147,21 @@ export default {
   },
   methods: {
     setSectionAnswer() {
+      this.$refs.successModal.hide();
+      this.$refs.failedModal.hide();
+
       let _section = 'answer_section1';
       this.hidePembahasan = true;
       if(this.section_answer!='1') {
         this.hidePembahasan = false;
+        this.$refs.failedModal.show();
+      } else {
+        this.$refs.successModal.show();
       }
+    },
+    hideModal () {
+      this.$refs.successModal.hide();
+      this.$refs.failedModal.hide()
     }
   },
 }
