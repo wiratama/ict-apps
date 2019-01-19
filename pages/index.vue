@@ -38,6 +38,6 @@ export default {
     Sidebarnav,
     Headernav,
     Footerbar
-  }
+  },
 }
 </script>

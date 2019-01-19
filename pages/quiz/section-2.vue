@@ -29,7 +29,8 @@
                   type="radio"
                   name="section-answer"
                   class="sectin-answer"
-                  value="1">
+                  v-bind:value="1"
+                  v-model="section_answer">
                   <label class="section-answer">Rp 120.000,00</label>
                 </div>
               </div>
@@ -41,7 +42,8 @@
                   type="radio"
                   name="section-answer"
                   class="sectin-answer"
-                  value="2">
+                  v-bind:value="2"
+                  v-model="section_answer">
                   <label class="section-answer">Rp 125.000,00</label>
                 </div>
               </div>
@@ -53,7 +55,8 @@
                   type="radio"
                   name="section-answer"
                   class="sectin-answer"
-                  value="3">
+                  v-bind:value="3"
+                  v-model="section_answer">
                   <label class="section-answer">Rp 115.000,00</label>
                 </div>
               </div>
@@ -65,7 +68,8 @@
                   type="radio"
                   name="section-answer"
                   class="sectin-answer"
-                  value="4">
+                  v-bind:value="4"
+                  v-model="section_answer">
                   <label class="section-answer">Rp 105.000,00</label>
                 </div>
               </div>
@@ -75,11 +79,33 @@
             <div class="col-12 grid-margin">
               <div class="card">
                 <div class="card-body">
-                  <button class="section-submit btn btn-success">Confirm!</button>
+                  <button class="section-submit btn btn-success" @click="setSectionAnswer">Confirm!</button>
                 </div>
               </div>
             </div>
           </div>
+
+          <div class="row">
+            <div class="col-12 grid-margin" v-bind:class="{ 'section-answer-clue': hidePembahasan }">
+              <div class="card">
+                <div class="card-body">
+                  <h2 clas="section-title">Pembahasan</h2>
+                  <hr>
+                  <b>Harga jual = Rp 126.000,00</b><br>
+                  <b>Persentase keuntungan = 5%</b><br>
+                  <br>
+                  <b>Harga pembelian = 100% / ( 100% + Persentase keuntungan ) X Harga jual</b><br>
+                  <b>Harga pembelian</b> = 100% / ( 100% + 5% ) X Rp 126.000,00<br>
+                  <b>Harga pembelian</b> = 100% / 105% X Rp 126.000,00<br>
+                  <b>Harga pembelian</b> = Rp 120.000,00<br>
+
+                  <nuxt-link to="/quiz/section-3" class="btn btn-success">Got it!</nuxt-link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footerbar/>
         </div>
       </div>
 
@@ -90,11 +116,28 @@
 <script>
 import Sidebarnav from '~/components/Sidebarnav.vue'
 import Headernav from '~/components/Headernav.vue'
+import Footerbar from '~/components/Footerbar.vue'
 
 export default {
   components: {
     Sidebarnav,
-    Headernav
-  }
+    Headernav,
+    Footerbar
+  },
+  data: function() {
+    return {
+      section_answer: 0,
+      hidePembahasan: true,
+    }
+  },
+  methods: {
+    setSectionAnswer() {
+      let _section = 'answer_section1';
+      this.hidePembahasan = true;
+      if(this.section_answer!='1') {
+        this.hidePembahasan = false;
+      }
+    }
+  },
 }
 </script>

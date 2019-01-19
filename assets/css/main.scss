@@ -111,6 +111,10 @@ $sidebar-width: 255px;
       -webkit-flex-grow: 1;
       flex-grow: 1;
 
+      .section-answer-clue{
+        display: none !important;
+      }
+
       .card {
         position: relative;
         display: flex;
