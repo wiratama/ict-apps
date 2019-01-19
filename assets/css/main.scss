@@ -134,6 +134,19 @@ $sidebar-width: 255px;
   }
 }
 
+// footer
+.footer {
+  background: #f2f8f9;
+  padding: 20px 1rem;
+  transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  border-top: 1px solid #f2f2f2;
+  font-size: calc(15px - 0.05rem);
+  font-family: 'dosismedium', Arial, sans-serif;
+}
+
 // responsive
 @media screen and (max-width: 991px) {
   .sidebar-navcanvas {
@@ -184,4 +197,21 @@ a:hover {
   color: #425569;
   text-decoration: none;
   font-weight: bold;
+}
+
+.app-body-powered {
+  font-size: 20px;
+  margin: 10px 0px 0px 0px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 12.5px;
+  padding-left: 12.5px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.text-muted {
+  color: #a5a3a3 !important;
 }

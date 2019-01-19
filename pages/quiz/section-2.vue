@@ -28,7 +28,8 @@
                   <input
                   type="radio"
                   name="section-answer"
-                  class="sectin-answer">
+                  class="sectin-answer"
+                  value="1">
                   <label class="section-answer">Rp 120.000,00</label>
                 </div>
               </div>
@@ -39,7 +40,8 @@
                   <input
                   type="radio"
                   name="section-answer"
-                  class="sectin-answer">
+                  class="sectin-answer"
+                  value="2">
                   <label class="section-answer">Rp 125.000,00</label>
                 </div>
               </div>
@@ -50,7 +52,8 @@
                   <input
                   type="radio"
                   name="section-answer"
-                  class="sectin-answer">
+                  class="sectin-answer"
+                  value="3">
                   <label class="section-answer">Rp 115.000,00</label>
                 </div>
               </div>
@@ -61,7 +64,8 @@
                   <input
                   type="radio"
                   name="section-answer"
-                  class="sectin-answer">
+                  class="sectin-answer"
+                  value="4">
                   <label class="section-answer">Rp 105.000,00</label>
                 </div>
               </div>

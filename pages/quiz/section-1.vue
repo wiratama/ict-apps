@@ -27,7 +27,8 @@
                   <input
                   type="radio"
                   name="section-answer"
-                  class="sectin-answer">
+                  class="sectin-answer"
+                  value="1">
                   <label class="section-answer">10 %</label>
                 </div>
               </div>
@@ -38,7 +39,8 @@
                   <input
                   type="radio"
                   name="section-answer"
-                  class="sectin-answer">
+                  class="sectin-answer"
+                  value="2">
                   <label class="section-answer">6 %</label>
                 </div>
               </div>
@@ -49,7 +51,8 @@
                   <input
                   type="radio"
                   name="section-answer"
-                  class="sectin-answer">
+                  class="sectin-answer"
+                  value="3">
                   <label class="section-answer">8 %</label>
                 </div>
               </div>
@@ -60,7 +63,8 @@
                   <input
                   type="radio"
                   name="section-answer"
-                  class="sectin-answer">
+                  class="sectin-answer"
+                  value="4">
                   <label class="section-answer">12 %</label>
                 </div>
               </div>
