@@ -97,9 +97,13 @@
                   <b>Untung</b> = Rp 18.360.000,00 - Rp 17.000.000,00<br>
                   <b>Untung</b> = Rp 1.360.000,00<br>
                   <br>
-                  <b>Persentase keuntungan = $$\frac {Untung}{Harga beli} \times 100\%$$</b><br>
-                  <b>Persentase keuntungan</b> = $$\frac {Rp\ 1.360.000,00}{Rp\ 17.000.000,00} \times 100\%$$<br>
-                  <b>Persentase keuntungan</b> = 8%<br>
+                  <!-- <b>Persentase keuntungan = $$\frac {Untung}{Harga beli} \times 100\%$$</b><br> -->
+                  <!-- <b>Persentase keuntungan</b> = $$\frac {Rp\ 1.360.000,00}{Rp\ 17.000.000,00} \times 100\%$$<br> -->
+                  <!-- <b>Persentase keuntungan</b> = 8%<br> -->
+
+                  $$Persentase\ keuntungan\ =\ \frac {Untung}{Harga beli} \times 100\%$$<br>
+                  $$Persentase\ keuntungan\ =\ \frac {Rp\ 1.360.000,00}{Rp\ 17.000.000,00} \times 100\%$$<br>
+                  $$Persentase\ keuntungan\ =\ 8\%$$<br>
                   <hr>
                   <nuxt-link to="/quiz/section-2" class="btn btn-success">Got it!</nuxt-link>
                 </div>
@@ -157,6 +161,7 @@ export default {
       if(this.section_answer!='3') {
         this.hidePembahasan = false;
         this.$refs.failedModal.show();
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
       } else {
         this.$refs.successModal.show();
       }
