@@ -10,10 +10,11 @@
             <div class="col-12 grid-margin">
               <div class="card">
                 <div class="card-body">
-                  <h2 clas="section-title">Pembahasan 4</h2>
+                  <h2 clas="section-title">Pembahasan 6</h2>
                   <hr>
                   <p class="section-question">
-                    Toko buku “Cahaya Ilmu” membeli beberapa jenis buku pelajaran dari penerbit Erlangga. Buku matematika dibeli sebanyak 100 buah dengan harga Rp. 5.000.000 dan memperoleh rabat 35%. Berapa rupiah yang harus dibayar pemilik toko buku itu?
+                    Pemilik sebuah toko mendapat kiriman 100 kg karung gula pasir dari gudang, yang masing-masing tertera pada karungnya tulisan bruto 115 kg dan tara 2 kg.<br>
+                    Neto kiriman gula pasir yang diterima pemilik toko adalah.
                   </p>
                 </div>
               </div>
@@ -29,7 +30,7 @@
                   class="sectin-answer"
                   v-bind:value="1"
                   v-model="section_answer">
-                  <label class="section-answer">Rp. 3.250.000</label>
+                  <label class="section-answer">201 kuintal</label>
                 </div>
               </div>
             </div>
@@ -42,7 +43,7 @@
                   class="sectin-answer"
                   v-bind:value="2"
                   v-model="section_answer">
-                  <label class="section-answer">Rp. 3.225.000</label>
+                  <label class="section-answer">117 kuintal</label>
                 </div>
               </div>
             </div>
@@ -55,7 +56,7 @@
                   class="sectin-answer"
                   v-bind:value="3"
                   v-model="section_answer">
-                  <label class="section-answer">Rp. 3.500.000</label>
+                  <label class="section-answer">115 kuintal</label>
                 </div>
               </div>
             </div>
@@ -68,7 +69,7 @@
                   class="sectin-answer"
                   v-bind:value="4"
                   v-model="section_answer">
-                  <label class="section-answer">Rp. 3.750.000</label>
+                  <label class="section-answer">113 kuintal</label>
                 </div>
               </div>
             </div>
@@ -89,14 +90,17 @@
                 <div class="card-body">
                   <h2 clas="section-title">Penjelasan</h2>
                   <hr>
-                  <b>Harga beli</b> = Rp. 5.000.000,00<br>
-                  <b>Rabat</b> = 35%<br>
+                  <b>Data untuk tiap karung:</b><br>
+                  <b>Bruto</b> = 115 Kg<br>
+                  <b>Tara</b> = 2 Kg<br>
                   <br>
-                  $$Rabat\ pembelian\ buku\ =\ \frac {35}{100} \times Rp. 5.000.000,00 =\ Rp. 1.750.000$$<br>
-                  <b>Jadi, pemilik toko buku harus membayar kepada penerbit sebesar</b><br>
-                  $$Rp. 5.000.000\ - Rp. 1.750.000\ =\ Rp.3.250.000$$
+                  <b>Rumus Tara, Neto dan Bruto </b>
+                  $$Neto\ =\ Bruto\ - Tara$$
+                  $$Neto\ =\ 115\ Kg\ - 2\ Kg\ = 113\ Kg$$
+
+                  $$Neto\ 100\ Karung\ =\ 100\ \times 113\ Kg\ =\ 11300\ Kg\ =\ 113\ kuintal$$
                   <hr>
-                  <nuxt-link to="/quiz/section-5" class="btn btn-success">Got it!</nuxt-link>
+                  <nuxt-link to="/quiz/section-7" class="btn btn-success">Got it!</nuxt-link>
                 </div>
               </div>
             </div>
@@ -113,7 +117,7 @@
         <span class="oi success-icon-modal" data-glyph="check"></span>
         <h3>Yo're Done!</h3>
       </div>
-      <nuxt-link to="/quiz/section-5" class="btn btn-success">Got it!</nuxt-link>
+      <nuxt-link to="/quiz/section-7" class="btn btn-success">Got it!</nuxt-link>
     </b-modal>
     <b-modal ref="failedModal" hide-footer title="Gothca!">
       <div class="d-block text-center">
@@ -149,7 +153,7 @@ export default {
 
       let _section = 'answer_section1';
       this.hidePembahasan = true;
-      if(this.section_answer!='1') {
+      if(this.section_answer!='4') {
         this.hidePembahasan = false;
         this.$refs.failedModal.show();
         MathJax.Hub.Queue(["Typeset",MathJax.Hub]);

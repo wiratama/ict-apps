@@ -10,10 +10,11 @@
             <div class="col-12 grid-margin">
               <div class="card">
                 <div class="card-body">
-                  <h2 clas="section-title">Pembahasan 4</h2>
+                  <h2 clas="section-title">Pembahasan 7</h2>
                   <hr>
                   <p class="section-question">
-                    Toko buku “Cahaya Ilmu” membeli beberapa jenis buku pelajaran dari penerbit Erlangga. Buku matematika dibeli sebanyak 100 buah dengan harga Rp. 5.000.000 dan memperoleh rabat 35%. Berapa rupiah yang harus dibayar pemilik toko buku itu?
+                    Ihwan menabung di suatu bank sebesar Rp.200.000,00 dengan bunga 15% setahun.<br>
+                    Besar tabungan Ihwan setelah 8 bulan adalah
                   </p>
                 </div>
               </div>
@@ -29,7 +30,7 @@
                   class="sectin-answer"
                   v-bind:value="1"
                   v-model="section_answer">
-                  <label class="section-answer">Rp. 3.250.000</label>
+                  <label class="section-answer">201 kuintal</label>
                 </div>
               </div>
             </div>
@@ -42,7 +43,7 @@
                   class="sectin-answer"
                   v-bind:value="2"
                   v-model="section_answer">
-                  <label class="section-answer">Rp. 3.225.000</label>
+                  <label class="section-answer">117 kuintal</label>
                 </div>
               </div>
             </div>
@@ -55,7 +56,7 @@
                   class="sectin-answer"
                   v-bind:value="3"
                   v-model="section_answer">
-                  <label class="section-answer">Rp. 3.500.000</label>
+                  <label class="section-answer">115 kuintal</label>
                 </div>
               </div>
             </div>
@@ -68,7 +69,7 @@
                   class="sectin-answer"
                   v-bind:value="4"
                   v-model="section_answer">
-                  <label class="section-answer">Rp. 3.750.000</label>
+                  <label class="section-answer">113 kuintal</label>
                 </div>
               </div>
             </div>
@@ -89,14 +90,22 @@
                 <div class="card-body">
                   <h2 clas="section-title">Penjelasan</h2>
                   <hr>
-                  <b>Harga beli</b> = Rp. 5.000.000,00<br>
-                  <b>Rabat</b> = 35%<br>
-                  <br>
-                  $$Rabat\ pembelian\ buku\ =\ \frac {35}{100} \times Rp. 5.000.000,00 =\ Rp. 1.750.000$$<br>
-                  <b>Jadi, pemilik toko buku harus membayar kepada penerbit sebesar</b><br>
-                  $$Rp. 5.000.000\ - Rp. 1.750.000\ =\ Rp.3.250.000$$
+                  <b>Tabungan awal</b> : M = Rp. 200.000,00<br>
+                  <b>Persentase</b>    : p = 15 % setahun<br>
+                  <b>Lama nabung</b>   : n = 8 bulan = 8/12 tahun<br>
+
+                  <P>
+                    Perlu diingat lama menabung dan bunga harus sama, artinya jika bunganya per tahun maka lama menabung juga harus diubah ke satuan tahun.<br>
+                    Begitu juga sebaliknya jika bunganya per bulan maka lama menabung juga harus diubah ke bulan
+                  </P>
+                  $$Bunga\ tungal\ =\ \frac {M\ \times b\ \times n}{100}$$
+                  $$Bunga\ tungal\ =\ Rp\ 200.000 \times \frac {15}{100} \times \frac {8}{12} \times \frac{100}{1}$$
+                  $$Bunga\ tungal\ =\ Rp\ 20.000$$
+
+                  <b>Jadi tabungan akhir setelah 8 bulan adalah</b>
+                  $$200.000\ + 20.000\ =\ Rp\ 220.000,00$$
                   <hr>
-                  <nuxt-link to="/quiz/section-5" class="btn btn-success">Got it!</nuxt-link>
+                  <nuxt-link to="/quiz/section-7" class="btn btn-success">Got it!</nuxt-link>
                 </div>
               </div>
             </div>
@@ -113,7 +122,7 @@
         <span class="oi success-icon-modal" data-glyph="check"></span>
         <h3>Yo're Done!</h3>
       </div>
-      <nuxt-link to="/quiz/section-5" class="btn btn-success">Got it!</nuxt-link>
+      <nuxt-link to="/" class="btn btn-success">Got it!</nuxt-link>
     </b-modal>
     <b-modal ref="failedModal" hide-footer title="Gothca!">
       <div class="d-block text-center">
@@ -149,7 +158,7 @@ export default {
 
       let _section = 'answer_section1';
       this.hidePembahasan = true;
-      if(this.section_answer!='1') {
+      if(this.section_answer!='4') {
         this.hidePembahasan = false;
         this.$refs.failedModal.show();
         MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
