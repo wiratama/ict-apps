@@ -10,11 +10,10 @@
             <div class="col-12 grid-margin">
               <div class="card">
                 <div class="card-body">
-                  <h2 clas="section-title">Pembahasan 1</h2>
+                  <h2 clas="section-title">Pembahasan 4</h2>
                   <hr>
                   <p class="section-question">
-                    Anto membeli motor baru dengan harga Rp. 17.000.000,00 dan dijual lagi dengan harga Rp. 18.360.000,00<br>
-                    Tentukan pesentase keuntungan yg diperoleh!
+                    1.	Toko buku “Cahaya Ilmu” membeli beberapa jenis buku pelajaran dari penerbit Erlangga. Buku matematika dibeli sebanyak 100 buah dengan harga Rp. 5.000.000 dan memperoleh rabat 35%. Berapa rupiah yang harus dibayar pemilik toko buku itu?
                   </p>
                 </div>
               </div>
@@ -30,7 +29,7 @@
                   class="sectin-answer"
                   v-bind:value="1"
                   v-model="section_answer">
-                  <label class="section-answer">10 %</label>
+                  <label class="section-answer">Rp. 3.250.000</label>
                 </div>
               </div>
             </div>
@@ -43,7 +42,7 @@
                   class="sectin-answer"
                   v-bind:value="2"
                   v-model="section_answer">
-                  <label class="section-answer">6 %</label>
+                  <label class="section-answer">Rp. 3.225.000</label>
                 </div>
               </div>
             </div>
@@ -56,7 +55,7 @@
                   class="sectin-answer"
                   v-bind:value="3"
                   v-model="section_answer">
-                  <label class="section-answer">8 %</label>
+                  <label class="section-answer">Rp. 3.500.000</label>
                 </div>
               </div>
             </div>
@@ -69,7 +68,7 @@
                   class="sectin-answer"
                   v-bind:value="4"
                   v-model="section_answer">
-                  <label class="section-answer">12 %</label>
+                  <label class="section-answer">Rp. 3.750.000</label>
                 </div>
               </div>
             </div>
@@ -90,18 +89,14 @@
                 <div class="card-body">
                   <h2 clas="section-title">Penjelasan</h2>
                   <hr>
-                  <b>Harga beli = Rp 17.000.000,00</b><br>
-                  <b>Harga jual = Rp 18.360.000,00</b><br>
+                  <b>Harga beli = Rp. 5.000.000,00</b><br>
+                  <b>Rabat</b> = 35%<br>
                   <br>
-                  <b>Untung = Harga jual - Harga beli</b><br>
-                  <b>Untung</b> = Rp 18.360.000,00 - Rp 17.000.000,00<br>
-                  <b>Untung</b> = Rp 1.360.000,00<br>
-                  <br>
-                  $$Persentase\ keuntungan\ =\ \frac {Untung}{Harga beli} \times 100\%$$<br>
-                  $$Persentase\ keuntungan\ =\ \frac {Rp\ 1.360.000,00}{Rp\ 17.000.000,00} \times 100\%$$<br>
-                  $$Persentase\ keuntungan\ =\ 8\%$$<br>
+                  $$Rabat\ pembelian\ buku\ =\ \frac {35}{100} \times Rp. 5.000.000,00 =\ Rp. 1.750.000$$<br>
+                  <b>Jadi, pemilik toko buku harus membayar kepada penerbit sebesar</b><br>
+                  $$Rp. 5.000.000\ - Rp. 1.750.000\ =\ Rp.3.250.000$$
                   <hr>
-                  <nuxt-link to="/quiz/section-2" class="btn btn-success">Got it!</nuxt-link>
+                  <nuxt-link to="/quiz/section-4" class="btn btn-success">Got it!</nuxt-link>
                 </div>
               </div>
             </div>
@@ -116,9 +111,9 @@
     <b-modal ref="successModal" hide-footer title="Gothca!">
       <div class="d-block text-center">
         <span class="oi success-icon-modal" data-glyph="check"></span>
-        <h3>Succes!</h3>
+        <h3>Yo're Done!</h3>
       </div>
-      <nuxt-link to="/quiz/section-2" class="btn btn-success">Got it!</nuxt-link>
+      <nuxt-link to="/quiz/section-4" class="btn btn-success">Got it!</nuxt-link>
     </b-modal>
     <b-modal ref="failedModal" hide-footer title="Gothca!">
       <div class="d-block text-center">
@@ -154,7 +149,7 @@ export default {
 
       let _section = 'answer_section1';
       this.hidePembahasan = true;
-      if(this.section_answer!='3') {
+      if(this.section_answer!='4') {
         this.hidePembahasan = false;
         this.$refs.failedModal.show();
         MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
@@ -164,7 +159,7 @@ export default {
     },
     hideModal () {
       this.$refs.successModal.hide();
-      this.$refs.failedModal.hide();
+      this.$refs.failedModal.hide()
     }
   },
 }

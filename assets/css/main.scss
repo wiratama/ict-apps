@@ -77,6 +77,14 @@ $sidebar-width: 255px;
         white-space: nowrap;
         height: 52px;
       }
+      .child-dropdown-menu {
+        border: none;
+        &.show {
+          position: relative;
+          padding: 0 0 0 1.5rem;
+          margin: 0;
+        }
+      }
     }
     .active {
       color: $main-green;
@@ -129,8 +137,18 @@ $sidebar-width: 255px;
         .card-body {
           padding: 1.88rem 1.81rem;
 
-          .section-question, .section-answer {
+          .section-materi, .section-question, .section-answer {
             font-size: 18px;
+          }
+
+          .intro-list {
+            list-style: none;
+            padding: 0px;
+          }
+
+          .content-indentation {
+            margin-top: 1rem;
+            padding: 0 0 0 1.5rem;
           }
         }
       }
@@ -233,5 +251,5 @@ a:hover {
 .MathJax_Display {
   font-size: 2em !important;
   text-align: left !important;
-  overflow-x: scroll;
+  overflow-x: auto;
 }

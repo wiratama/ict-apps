@@ -10,7 +10,7 @@
             <div class="col-12 grid-margin">
               <div class="card">
                 <div class="card-body">
-                  <h2 clas="section-title">Section 3</h2>
+                  <h2 clas="section-title">Pembahasan 3</h2>
                   <hr>
                   <p class="section-question">
                     Seseorang membeli sepeda motor bekas seharga rp 12.000.000,00 dan mengeluarkan biaya perbaikan Rp 500.00,00.<br>
@@ -89,7 +89,7 @@
             <div class="col-12 grid-margin" v-bind:class="{ 'section-answer-clue': hidePembahasan }">
               <div class="card">
                 <div class="card-body">
-                  <h2 clas="section-title">Pembahasan</h2>
+                  <h2 clas="section-title">Penjelasan</h2>
                   <hr>
                   <b>Harga beli = Rp 12.000.000,00 + Rp 500.000,00</b><br>
                   <b>Harga beli</b> = Rp 12.500.000,00<br>
@@ -102,7 +102,7 @@
                   $$Persentase\ keuntungan\ =\ \frac {Rp\ 2.500.000,00}{Rp\ 12.500.000,00} \times 100\%$$<br>
                   $$Persentase\ keuntungan\ =\ 20\%$$<br>
                   <hr>
-                  <nuxt-link to="/" class="btn btn-success">Got it!</nuxt-link>
+                  <nuxt-link to="/quiz/section-4" class="btn btn-success">Got it!</nuxt-link>
                 </div>
               </div>
             </div>
@@ -119,7 +119,7 @@
         <span class="oi success-icon-modal" data-glyph="check"></span>
         <h3>Yo're Done!</h3>
       </div>
-      <nuxt-link to="/" class="btn btn-success">Got it!</nuxt-link>
+      <nuxt-link to="/quiz/section-4" class="btn btn-success">Got it!</nuxt-link>
     </b-modal>
     <b-modal ref="failedModal" hide-footer title="Gothca!">
       <div class="d-block text-center">

@@ -10,7 +10,7 @@
             <div class="col-12 grid-margin">
               <div class="card">
                 <div class="card-body">
-                  <h2 clas="section-title">Section 2</h2>
+                  <h2 clas="section-title">Pembahasan 2</h2>
                   <hr>
                   <p class="section-question">
                     Seorang pedagang membeli barang yg dijual dengan harga Rp 126.000,00.<br>
@@ -89,7 +89,7 @@
             <div class="col-12 grid-margin" v-bind:class="{ 'section-answer-clue': hidePembahasan }">
               <div class="card">
                 <div class="card-body">
-                  <h2 clas="section-title">Pembahasan</h2>
+                  <h2 clas="section-title">Penjelasan</h2>
                   <hr>
                   <b>Harga jual = Rp 126.000,00</b><br>
                   <b>Persentase keuntungan = 5%</b><br>

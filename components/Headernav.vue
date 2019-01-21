@@ -1,7 +1,7 @@
 <template>
   <ul class="nav d-flex justify-content-end fixed-top top-nav-bar">
     <li class="nav-item">
-      <a class="nav-link active">ICT - Quiz Apps</a>
+      <a class="nav-link active">E-Learning</a>
     </li>
     <li class="nav-item">
       <button class="navbar-toggler d-lg-none" type="button" @click="sidebarMenu">
