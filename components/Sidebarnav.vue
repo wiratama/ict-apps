@@ -37,6 +37,15 @@
           <nuxt-link
             to="/quiz/section-4"
             class="nav-link">Pembahasan 4</nuxt-link>
+          <nuxt-link
+            to="/quiz/section-5"
+            class="nav-link">Pembahasan 5</nuxt-link>
+          <nuxt-link
+            to="/quiz/section-6"
+            class="nav-link">Pembahasan 6</nuxt-link>
+          <nuxt-link
+            to="/quiz/section-7"
+            class="nav-link">Pembahasan 7</nuxt-link>
         </div>
       </li>
     </ul>

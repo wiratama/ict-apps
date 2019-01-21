@@ -19,7 +19,8 @@
     "bootstrap-vue": "^2.0.0-beta",
     "cross-env": "^5.2.0",
     "nuxt": "^2.0.0",
-    "vue-mathjax": "0.0.6"
+    "vue-mathjax": "0.0.6",
+    "vuex-persist": "^2.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
