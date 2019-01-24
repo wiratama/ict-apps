@@ -12,13 +12,11 @@
 </template>
 
 <script>
-
 export default {
   methods: {
     sidebarMenu() {
       let _show_sidebar = this.$store.state.sidebar_active;
-      this.$store.commit('shoHideSidebar', !_show_sidebar)
-      console.log(this.$store.state.sidebar_active);
+      this.$store.commit('shoHideSidebar', !_show_sidebar);
     }
   }
 }

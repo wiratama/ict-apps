@@ -7,6 +7,7 @@
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
+            <passingscore/>
             <div class="col-12 grid-margin">
               <div class="card">
                 <div class="card-body">
@@ -133,12 +134,14 @@
 import Sidebarnav from '~/components/Sidebarnav.vue'
 import Headernav from '~/components/Headernav.vue'
 import Footerbar from '~/components/Footerbar.vue'
+import Passingscore from '~/components/Passingscore.vue'
 
 export default {
   components: {
     Sidebarnav,
     Headernav,
-    Footerbar
+    Footerbar,
+    Passingscore
   },
   data: function() {
     return {
@@ -157,13 +160,19 @@ export default {
         this.hidePembahasan = false;
         this.$refs.failedModal.show();
         MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+        this.addDataScore(0);
       } else {
         this.$refs.successModal.show();
+        this.addDataScore(1);
       }
     },
     hideModal () {
       this.$refs.successModal.hide();
-      this.$refs.failedModal.hide()
+      this.$refs.failedModal.hide();
+      this.$store.dispatch('addScoreValue');
+    },
+    addDataScore (value) {
+      this.$store.commit('addDataScore', value);
     }
   },
 }
