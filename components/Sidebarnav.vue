@@ -1,12 +1,17 @@
 <template>
   <nav class="sidebar-nav sidebar-navcanvas" v-bind:class="{ active: $store.state.sidebar_active }">
-    <h5 class="sidebar-title">E-Learning Matematika</h5>
+    <nuxt-link
+            to="/"
+            class="nav-link"><h5 class="sidebar-title">E-Learning Matematika</h5></nuxt-link>
     <hr>
     <ul class="nav">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" @click="dropDownMenu('materi_drop_down')" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" :aria-expanded="this.drop_down.materi_drop_down">Materi</a>
         
         <div class="dropdown-menu child-dropdown-menu pembahasan-child-menu" v-bind:class="{ show: this.drop_down.materi_drop_down }">
+          <nuxt-link
+            to="/"
+            class="nav-link">Pendahuluan</nuxt-link>
           <nuxt-link
             to="/materi/materi-1"
             class="nav-link">Materi 1</nuxt-link>
